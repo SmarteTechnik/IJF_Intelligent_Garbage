@@ -2,7 +2,7 @@ import os
 import cv2
 
 # Ensure the directories exist before starting
-base_path = "own_data"
+base_path = "std_own_data"
 categories = [["Gelber Sack", 1], ["Biomuell", 1], ["Restmuell", 1], ["Papiermuell", 1]]
 
 for cat_name, _ in categories:

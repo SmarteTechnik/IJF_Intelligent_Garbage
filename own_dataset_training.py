@@ -4,7 +4,7 @@ import cv2
 from ultralytics import YOLO
 
 # --- CONFIGURATION ---
-SOURCE_DIR = "own_data"
+SOURCE_DIR = "std_own_data"
 DATASET_DIR = "own_yolo_dataset"
 PROJECT_NAME = "own_trash_classification"
 RUN_NAME = "quick_shot_run"
