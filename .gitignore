@@ -1,0 +1,14 @@
+/yolo26n-cls.pt
+/yolo11n-cls.pt
+/dist/
+/build/
+/runs/
+/old/
+/TrashClassifier.spec
+/venv_build/
+
+/DATA/custom_own_data/
+/DATA/custom_own_yolo_dataset/
+/DATA/std_own_data_backup/
+/DATA/std_own_yolo_dataset/
+/DATA/trash_classification/
