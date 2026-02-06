@@ -1,4 +1,4 @@
-# Intelligenter Müll-Trenner (Smart Trash Classifier)
+# IJF Intelligenter Müll-Trenner (Smart Trash Classifier)
 
 Diese Anwendung nutzt Computer Vision und Deep Learning (YOLOv26), um Abfall über eine Webcam zu klassifizieren und hilft bei der korrekten Mülltrennung (Gelber Sack, Papiermüll, Restmüll).
 
