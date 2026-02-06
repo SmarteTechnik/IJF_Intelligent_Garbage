@@ -25,7 +25,7 @@ else:
 # --- Konfiguration ---
 TARGET_HEIGHT = 400
 SMOOTHING_ALPHA = 0.05  # Glättungsfaktor für Vorhersagen (0.1 = weich, 0.9 = reaktiv)
-EPOCHS_TO_TRAIN = 10
+EPOCHS_TO_TRAIN = 15
 CATEGORIES = ["Gelber Sack", "Papiermüll", "Restmüll"]
 CLASSIFICATION_MODEL = "yolo26n-cls.pt"
 
@@ -480,7 +480,7 @@ class TrashClassificatorApp(QWidget):
         model = YOLO(CLASSIFICATION_MODEL)
         model.train(
             data=str(self.std_dataset_dir),
-            epochs=5,
+            epochs=EPOCHS_TO_TRAIN,
             imgsz=640,
             project=str(self.project_path),
             name=self.std_run_name,
