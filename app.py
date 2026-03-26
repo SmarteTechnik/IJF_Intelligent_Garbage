@@ -41,7 +41,7 @@ def get_best_device():
 
 
 DEVICE = get_best_device()
-print(f"Nutze Gerät für Berechnungen: {DEVICE.upper()}")
+# print(f"Nutze Gerät für Berechnungen: {DEVICE.upper()}")
 
 
 class TrainerThread(QThread):
@@ -76,12 +76,14 @@ class TrainerThread(QThread):
         res = self.model.train(
             data=str(self.dataset_path),
             epochs=self.epochs,
-            imgsz=640,
+            imgsz=512,
             project=str(self.project_path),
             name=self.run_name,
             device=DEVICE,
             exist_ok=True,
-            verbose=False
+            verbose=False,
+            batch=4,
+            amp=True
         )
 
         # Sicherstellen, dass die Gewichte korrekt kopiert werden
@@ -481,11 +483,13 @@ class TrashClassificatorApp(QWidget):
         model.train(
             data=str(self.std_dataset_dir),
             epochs=EPOCHS_TO_TRAIN,
-            imgsz=640,
+            imgsz=512,
             project=str(self.project_path),
             name=self.std_run_name,
             exist_ok=True,
-            device=DEVICE
+            device=DEVICE,
+            batch=4,
+            amp=True
         )
 
         # Gewichte sichern
