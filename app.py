@@ -106,7 +106,7 @@ class TrashClassificatorApp(QWidget):
         self.setWindowTitle("Intelligenter Müll-Trenner")
 
         # Kamera Einstellungen
-        self.current_cam_index = 0
+        self.current_cam_index = 1
         self.capture = None
 
         # Status-Variablen
